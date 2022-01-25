@@ -275,7 +275,7 @@ window.onload = wrap_img;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The fit method will start by iterating over our specified range of trees specified as the <code>num_trees</code> parameter. We'll pass the parameters defined in the <code>__init__</code> method that are required by a single decision tree. Here, these will be <code>min_samples_split</code>, <code>max_depth</code> and <code>num_features</code>.</p>
-<p>Then, we will train this tree on a random bootstrap sample of the training data. We'll extract this sample using a helper function <code>draw_bootstrap_sample()</code>. This function will randomly select from zero to all the available training observations. We will allow draw samples with replacement, meaning we will randomly drop some training observations and replace them with duplicates of the other observations (that are being kept).</p>
+<p>Then, we will train this tree on a random bootstrap sample of the training data. We'll extract this sample using a helper function <code>draw_bootstrap_sample()</code>. This function will randomly select from zero to all the available training observations. We will draw samples with replacement, <a href="https://www.educba.com/numpy-random-choice/">meaning</a> we will randomly drop some training observations and replace them with duplicates of the other (randomly selected) observations.</p>
 <p>Each decision tree will be trained on this sample of the data passed to it and the trained tree will be appended to the empty list we instantiated earlier in <code>__init__</code>.</p>
 
 </div>
