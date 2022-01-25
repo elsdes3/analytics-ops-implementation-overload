@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Automate Creation and Use of a Structured Data Science Portfolio Project | Implemention of Data Analytics</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Automate Creation and Use of a Structured Data Science Portfolio Project" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="A minimal project structure for a data science portfolio." />
+<meta property="og:description" content="A minimal project structure for a data science portfolio." />
+<link rel="canonical" href="https://elsdes3.github.io/analytics-ops-implementation-overload/markdown/cookiecutter/data-science/portfolio/template/python/2022/01/24/project-template-post.html" />
+<meta property="og:url" content="https://elsdes3.github.io/analytics-ops-implementation-overload/markdown/cookiecutter/data-science/portfolio/template/python/2022/01/24/project-template-post.html" />
+<meta property="og:site_name" content="Implemention of Data Analytics" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-01-24T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Automate Creation and Use of a Structured Data Science Portfolio Project" />
+<script type="application/ld+json">
+{"url":"https://elsdes3.github.io/analytics-ops-implementation-overload/markdown/cookiecutter/data-science/portfolio/template/python/2022/01/24/project-template-post.html","@type":"BlogPosting","headline":"Automate Creation and Use of a Structured Data Science Portfolio Project","dateModified":"2022-01-24T00:00:00-06:00","datePublished":"2022-01-24T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://elsdes3.github.io/analytics-ops-implementation-overload/markdown/cookiecutter/data-science/portfolio/template/python/2022/01/24/project-template-post.html"},"description":"A minimal project structure for a data science portfolio.","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/analytics-ops-implementation-overload/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://elsdes3.github.io/analytics-ops-implementation-overload/feed.xml" title="Implemention of Data Analytics" /><link rel="shortcut icon" type="image/x-icon" href="/analytics-ops-implementation-overload/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/analytics-ops-implementation-overload/">Implemention of Data Analytics</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/analytics-ops-implementation-overload/about/">About Me</a><a class="page-link" href="/analytics-ops-implementation-overload/search/">Search</a><a class="page-link" href="/analytics-ops-implementation-overload/categories/">Tags</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Automate Creation and Use of a Structured Data Science Portfolio Project</h1><p class="page-description">A minimal project structure for a data science portfolio.</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-01-24T00:00:00-06:00" itemprop="datePublished">
+        Jan 24, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      20 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/analytics-ops-implementation-overload/categories/#markdown">markdown</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/analytics-ops-implementation-overload/categories/#cookiecutter">cookiecutter</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/analytics-ops-implementation-overload/categories/#data-science">data-science</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/analytics-ops-implementation-overload/categories/#portfolio">portfolio</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/analytics-ops-implementation-overload/categories/#template">template</a>
+        &nbsp;
+      
+        <a class="category-tags-link" href="/analytics-ops-implementation-overload/categories/#python">python</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#automate-creation-and-use-of-a-structured-data-science-portfolio-project">Automate Creation and Use of a Structured Data Science Portfolio Project</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#background-and-motivation">Background and Motivation</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#the-use-case">The Use-Case</a></li>
+<li class="toc-entry toc-h3"><a href="#the-problem">The Problem</a></li>
+<li class="toc-entry toc-h3"><a href="#build-on-existing-proven-solutions">Build on Existing Proven Solutions</a></li>
+<li class="toc-entry toc-h3"><a href="#the-need-for-customizing-and-extending-an-available-solution">The Need for Customizing and Extending An Available Solution</a></li>
+<li class="toc-entry toc-h3"><a href="#a-candidate-solution">A Candidate Solution</a></li>
+<li class="toc-entry toc-h3"><a href="#about-this-blog-post">About this blog post</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#using-the-cookiecutter-portfolio-template">Using the cookiecutter-portfolio template</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#step-by-step-instructions-to-create-a-project-using-cookiecutter-portfolio">Step-by-Step Instructions to create a project using cookiecutter-portfolio</a></li>
+<li class="toc-entry toc-h3"><a href="#walkthrough-of-the-portfolio-project-that-is-created">Walkthrough of the portfolio project that is created</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#document-our-analysis-in-jupyter-notebooks">Document our analysis in Jupyter notebooks</a></li>
+<li class="toc-entry toc-h4"><a href="#programmatically-execute-our-notebooks">Programmatically execute our notebooks</a></li>
+<li class="toc-entry toc-h4"><a href="#make-it-easier-for-others-to-run-and-use-our-analysis">Make it easier for others to run and use our analysis</a></li>
+<li class="toc-entry toc-h4"><a href="#correctly-handle-the-use-of-python-virtual-environments">Correctly handle the use of Python virtual environments</a></li>
+<li class="toc-entry toc-h4"><a href="#keep-sensitive-info-and-files-away-from-version-control-systems-git">Keep sensitive info and files away from version control systems (git)</a></li>
+<li class="toc-entry toc-h4"><a href="#ensure-our-code-is-properly-formatted-before-it-is-uploaded-to-github">Ensure our code is properly formatted before it is uploaded to Github</a></li>
+<li class="toc-entry toc-h4"><a href="#co-ordinate-execution-of-our-workflows-using-a-makefile">Co-ordinate execution of our workflows using a Makefile</a></li>
+<li class="toc-entry toc-h4"><a href="#extract-and-outsource-code-into-python-modules">Extract and Outsource code into Python modules</a></li>
+<li class="toc-entry toc-h4"><a href="#licensing">Licensing</a></li>
+<li class="toc-entry toc-h4"><a href="#customize-the-cookiecutter-portfolio-template">Customize the cookiecutter-portfolio template</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#differences-between-cookiecutter-portfolio-and-cookiecutter-data-science">Differences between cookiecutter-portfolio and cookiecutter-data-science</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#changes-in-the-created-project-template-relative-to-cookiecutter-data-science">Changes in the created project template relative to cookiecutter-data-science</a></li>
+<li class="toc-entry toc-h3"><a href="#changes-at-the-project-level-relative-to-cookiecutter-data-science">Changes at the project level relative to cookiecutter-data-science</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#summary">Summary</a></li>
+<li class="toc-entry toc-h2"><a href="#contributing-to-cookiecutter-portfolio">Contributing to cookiecutter-portfolio</a></li>
+</ul>
+</li>
+</ul><h1 id="automate-creation-and-use-of-a-structured-data-science-portfolio-project">
+<a class="anchor" href="#automate-creation-and-use-of-a-structured-data-science-portfolio-project" aria-hidden="true"><span class="octicon octicon-link"></span></a>Automate Creation and Use of a Structured Data Science Portfolio Project</h1>
+
+<h2 id="background-and-motivation">
+<a class="anchor" href="#background-and-motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Background and Motivation</h2>
+
+<h3 id="the-use-case">
+<a class="anchor" href="#the-use-case" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Use-Case</h3>
+
+<p>Starting a new data analytics project can be stressful, repetitive or annoying. Actually, it can be all of these combined. We are thinking about the business use-case (user, client, etc.) for the project we’re about to begin working on. We want it to be our implementation of a real-world use-case and we’re trying to correctly identify the business user (client) and their requirements. Additionally, we’re dealing with constraints imposed by data, such as when the data will be available to use, if there is enough of it and what supplementary datasets are needed.</p>
+
+<h3 id="the-problem">
+<a class="anchor" href="#the-problem" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Problem</h3>
+
+<p>If we’ve got a previous project structure, it becomes tempting to copy-paste that structure into a new folder and begin changing files. This becomes annoying because we want to focus on the use-case for the project, and the related issues mentioned above, and not the drudgery of 56 mouse-clicks to <em>set up one project</em>. We know that this process has to be repeated for the next project. This process is susceptible to errors, missing files and missing content.</p>
+
+<h3 id="build-on-existing-proven-solutions">
+<a class="anchor" href="#build-on-existing-proven-solutions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Build on Existing Proven Solutions</h3>
+
+<p>The recommended approach to creation of a new data science project is to spend the time <strong>once</strong> to build a project template that we can use across multiple projects and automate this project set-up process. The <a href="https://github.com/drivendata/cookiecutter-data-science/tree/v2"><code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code> project template</a> does precisely this. It can be used to effortlessly and reliably start up a new project.</p>
+
+<h3 id="the-need-for-customizing-and-extending-an-available-solution">
+<a class="anchor" href="#the-need-for-customizing-and-extending-an-available-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>The Need for Customizing and Extending An Available Solution</h3>
+
+<p>But what happens if we want to go beyond this and enhance the functionality of such a template. For example, if we want to</p>
+<ul>
+  <li>create a project directory structure, pre-populate analysis (sample) code to use this structure and then run this code to see the output</li>
+  <li>specify logical code-formatting requirements and run checks on any pre-populated code in our project</li>
+  <li>set up all the Python virtual environments we need</li>
+  <li>set up a <a href="https://www.atlassian.com/continuous-delivery/continuous-integration">continuous-integration</a> workflow to
+    <ul>
+      <li>verify that our end-to-end workflow (including code-formatting checks) runs after we have made any changes to our code base</li>
+      <li>ensure our analytical tools (Python libraries) stay up to date</li>
+    </ul>
+  </li>
+</ul>
+
+<p>then we need to expand on the <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code> template. That project has provided us with a solid base, but it is up to us to customize it to our preference. This is why the <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> template (<a href="https://github.com/elsdes3/cookiecutter-portfolio">link</a>) was created.</p>
+
+<h3 id="a-candidate-solution">
+<a class="anchor" href="#a-candidate-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a>A Candidate Solution</h3>
+
+<p><code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> goes a little further than <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code>. It implements the four enhancements discussed above (and a few others too), and makes opinionated modifications to the solid base provided by <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code> in order to accomplish this. Its underlying goals are to</p>
+<ul>
+  <li>make several decisions for the user in preparing minimal pre-populated content in files
+    <ul>
+      <li>two sample notebooks for data analysis</li>
+      <li>baseline implementation of code-formatting checks</li>
+    </ul>
+  </li>
+  <li>configure programmatic execution of analysis during <a href="https://docs.github.com/en/actions/automating-builds-and-tests/about-continuous-integration">CI using Github Actions</a>
+</li>
+  <li>run the probided minimal (sample) analysis code from start to finish, and perform code-formatting checks</li>
+</ul>
+
+<p>This template can be used to automate the set-up and continuous development of a Python-based data analytics project that a user wants to host on <a href="https://github.com/">Github</a>.</p>
+
+<h3 id="about-this-blog-post">
+<a class="anchor" href="#about-this-blog-post" aria-hidden="true"><span class="octicon octicon-link"></span></a>About this blog post</h3>
+
+<p>This blog post is intended to explain the following about the <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> template</p>
+<ul>
+  <li>how to use it to create a new data analytics project</li>
+  <li>what are the files and folders produced by the template, and what is their purpose</li>
+  <li>how does it differ from <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code>
+</li>
+</ul>
+
+<h2 id="using-the-cookiecutter-portfolio-template">
+<a class="anchor" href="#using-the-cookiecutter-portfolio-template" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using the <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> template</h2>
+
+<h3 id="step-by-step-instructions-to-create-a-project-using-cookiecutter-portfolio">
+<a class="anchor" href="#step-by-step-instructions-to-create-a-project-using-cookiecutter-portfolio" aria-hidden="true"><span class="octicon octicon-link"></span></a>Step-by-Step Instructions to create a project using <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code>
+</h3>
+
+<p>Install the <code class="language-plaintext highlighter-rouge">git</code> system package from <a href="https://git-scm.com/downloads">here</a>.</p>
+
+<p>Next, install the necessary Python packages</p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">tox</code> (<a href="https://tox.wiki/en/latest/">link</a>)
+    <ul>
+      <li>this will be used to manage virtual environments</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">cookiecutter</code> (<a href="https://cookiecutter.readthedocs.io/en/latest/">link</a>)
+    <ul>
+      <li>this is required since the <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> template was created using the <code class="language-plaintext highlighter-rouge">cookiecutter</code> Python library</li>
+    </ul>
+  </li>
+</ul>
+
+<p>using</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pip3 <span class="nb">install </span>tox cookiecutter
+</code></pre></div></div>
+
+<p>A templated portfolio project can be created from this template by cloning the source code from github</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/elsdes3/cookiecutter-portfolio
+</code></pre></div></div>
+
+<p>Next, change into the root directory of the project</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cd </span>cookiecuter-portfolio
+</code></pre></div></div>
+
+<p>and run the <a href="https://www.gnu.org/software/make/"><code class="language-plaintext highlighter-rouge">make</code></a> <a href="https://www.gnu.org/software/make/manual/html_node/Standard-Targets.html">target</a> <code class="language-plaintext highlighter-rouge">build</code> using</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make build
+</code></pre></div></div>
+
+<p>These instructions have only been verified on Linux and MacOS systems. Currently, verification is not available on Windows-based systems.</p>
+
+<h3 id="walkthrough-of-the-portfolio-project-that-is-created">
+<a class="anchor" href="#walkthrough-of-the-portfolio-project-that-is-created" aria-hidden="true"><span class="octicon octicon-link"></span></a>Walkthrough of the portfolio project that is created</h3>
+
+<h4 id="document-our-analysis-in-jupyter-notebooks">
+<a class="anchor" href="#document-our-analysis-in-jupyter-notebooks" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Document our analysis in Jupyter notebooks</strong>
+</h4>
+
+<p>Initial development of data science analysis is commonly done using <a href="https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html">Jupyter notebooks</a>, which are <a href="https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html#notebook-document"><strong>documents</strong> consisting of code (including multiple programming languages), rich text, figures, images, links, etc</a>. In this template, notebooks are named using a numbering system. A two-digit number is specified in the prefix of the notebook filename. Notebooks should be run in chronological order of their filename. One approach to using multiple notebooks is to limit each notebook to performing a single step in our overall workflow.</p>
+
+<p>A logical sequence of workflow steps and their corresponding notebooks might be the following</p>
+<ul>
+  <li>retrieve raw data
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">01_get_raw_data.ipynb</code></li>
+    </ul>
+  </li>
+  <li>process raw data
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">02_process_data.ipynb</code></li>
+    </ul>
+  </li>
+  <li>explore processed data
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">03_explore_processed_data.ipynb</code></li>
+    </ul>
+  </li>
+  <li>analyze processed data
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">04_analyze_processed_data.ipynb</code></li>
+    </ul>
+  </li>
+</ul>
+
+<p>This template provides sample code for the first two of these steps (notebooks, <a href="https://nbviewer.org/github/elsdes3/cookiecutter-portfolio/blob/main/cookiecutter-project/%7B%7Bcookiecutter.repo_name%7D%7D/01_get_data.ipynb">1</a> and <a href="https://nbviewer.org/github/elsdes3/cookiecutter-portfolio/blob/main/cookiecutter-project/%7B%7Bcookiecutter.repo_name%7D%7D/02_process_data.ipynb">2</a>).</p>
+
+<h4 id="programmatically-execute-our-notebooks">
+<a class="anchor" href="#programmatically-execute-our-notebooks" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Programmatically execute our notebooks</strong>
+</h4>
+
+<p>How can we be sure that our code runs from start to finish? When we’re sharing code in our portfolio project, we want to be sure that our analysis is free of errors. In a data science portfolio project, this amounts to having several notebooks that run from start to finish. If each notebook captures a single step in our analysis workflow, then we would want to run all notebooks in succession and verify that we don’t get any errors. If we define notebook inputs using <code class="language-plaintext highlighter-rouge">papermill_runner.py</code>, then this file will allow us to programmatically execute a notebook using Python. The benefit of this is that we can automate the execution of an entire workflow (consisting of several notebooks). If we’ve taken care to ensure our analysis does indeed run as we expect it to, from start to finish, then this should make us confident in having others also run our code from themselves and follow the logic we have implemented in our code. Using <code class="language-plaintext highlighter-rouge">papermill</code> is a convenient approach to be sure that our portfolio project contains Python code that is free of errors.</p>
+
+<p>Papermill requires a single cell with Python variables that can be programmatically changed. This cell should be marked with a <code class="language-plaintext highlighter-rouge">parameters</code> tag. See <a href="https://jupyterbook.org/content/metadata.html#adding-tags-using-notebook-interfaces">these instructions</a> for adding a tag to a cell. In the sample notebook <code class="language-plaintext highlighter-rouge">01_get_data.ipynb</code>, <a href="https://nbviewer.org/github/elsdes3/cookiecutter-portfolio/blob/main/cookiecutter-project/%7B%7Bcookiecutter.repo_name%7D%7D/01_get_data.ipynb#user-inputs">these parameters are</a></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">num_data_files</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">num_rows</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">column_names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"A"</span><span class="p">,</span> <span class="s">"B"</span><span class="p">,</span> <span class="s">"C"</span><span class="p">,</span> <span class="s">"D"</span><span class="p">,</span> <span class="s">"E"</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>and in <code class="language-plaintext highlighter-rouge">02_process_data.ipynb</code>, <a href="https://nbviewer.org/github/elsdes3/cookiecutter-portfolio/blob/main/cookiecutter-project/%7B%7Bcookiecutter.repo_name%7D%7D/02_process_data.ipynb#user-inputs">these parameters are</a></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">processed_data_file_name</span> <span class="o">=</span> <span class="s">"processed"</span>
+</code></pre></div></div>
+
+<p>The <code class="language-plaintext highlighter-rouge">papermill_runner.py</code> script contains these python parameters in dictionaries for the two sample notebooks provided with this template (<code class="language-plaintext highlighter-rouge">one_dict</code> and <code class="language-plaintext highlighter-rouge">two_dict</code> for <code class="language-plaintext highlighter-rouge">01_get_data.ipynb</code> and <code class="language-plaintext highlighter-rouge">02_process_data.ipynb</code> respectively). In this script, these two notebook names are assigned to the variables <code class="language-plaintext highlighter-rouge">one_dict_nb_name</code> and <code class="language-plaintext highlighter-rouge">two_dict_nb_name</code> respectively.</p>
+
+<p>To add more notebooks (eg. <code class="language-plaintext highlighter-rouge">03_explore_processed_data.ipynb</code>) to this template, the following changes must be made</p>
+<ul>
+  <li>add a new dictionary of input variables (eg. <code class="language-plaintext highlighter-rouge">three_dict</code>) to <code class="language-plaintext highlighter-rouge">nb_dict_list</code>
+</li>
+  <li>add a new notebook name (eg. <code class="language-plaintext highlighter-rouge">three_dict_nb_name</code>) to <code class="language-plaintext highlighter-rouge">nb_name_list</code>
+</li>
+</ul>
+
+<h4 id="make-it-easier-for-others-to-run-and-use-our-analysis">
+<a class="anchor" href="#make-it-easier-for-others-to-run-and-use-our-analysis" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Make it easier for others to run and use our analysis</strong>
+</h4>
+
+<p>Can other users run our data analysis online? It is convenient for others to run our code if they don’t need to download the project locally. It shows we care about visitors looking to explore our portfolio projects. We can facilitate this using the MyBinder service. A visitor to our project on Github would need to specify the environment using <code class="language-plaintext highlighter-rouge">environment.yml</code>. So, a sample version of this file is provided by this template. The visitor can then follow instructions in the <a href="https://mybinder.readthedocs.io/en/latest/introduction.html#a-binder-example">basic example from the MyBinder documentation</a> to create an online computing environment to run the notebooks in our portfolio project.</p>
+
+<h4 id="correctly-handle-the-use-of-python-virtual-environments">
+<a class="anchor" href="#correctly-handle-the-use-of-python-virtual-environments" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Correctly handle the use of Python virtual environments</strong>
+</h4>
+
+<p>This is a template based on Python. It is best for Python code to run in a self-contained and independent environment from the host system. One way to achieve this is through the use of a Python virtual environment. We will use the <a href="https://tox.wiki/en/latest/"><code class="language-plaintext highlighter-rouge">tox</code> Python library</a> to manage all our Python virtual environments. These are specified in <code class="language-plaintext highlighter-rouge">tox.ini</code>, which will act as the central hub for installing all Python dependencies required for us to run the Python code that preforms the data analysis in our propject. This file will install the Python packages specified in <code class="language-plaintext highlighter-rouge">requirements.txt</code>.</p>
+
+<h4 id="keep-sensitive-info-and-files-away-from-version-control-systems-git">
+<a class="anchor" href="#keep-sensitive-info-and-files-away-from-version-control-systems-git" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Keep sensitive info and files away from version control systems (<code class="language-plaintext highlighter-rouge">git</code>)</strong>
+</h4>
+
+<p>For obvious reasons, our portfolio should not contain information like passwords. It makes us seem uninterested in paying attention to details and unreliable with sensitive data. <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> assumes that <code class="language-plaintext highlighter-rouge">git</code> (<a href="https://www.atlassian.com/git/tutorials/what-is-git">link</a>) will be used for version control (and that we’ll be posting our portfolio projects to <a href="https://kinsta.com/knowledgebase/what-is-github/">GitHub</a>). To ensure we don’t commit files containing sensitive or unnecessary information to <code class="language-plaintext highlighter-rouge">git</code>, a <code class="language-plaintext highlighter-rouge">.gitignore</code> file is provided. The contents of this file are specific to Python and are taken from <a href="https://www.toptal.com/developers/gitignore">gitignore.io</a>. We should add files that we don’t want <code class="language-plaintext highlighter-rouge">git</code> to track to this <code class="language-plaintext highlighter-rouge">.gitignore</code> file.</p>
+
+<h4 id="ensure-our-code-is-properly-formatted-before-it-is-uploaded-to-github">
+<a class="anchor" href="#ensure-our-code-is-properly-formatted-before-it-is-uploaded-to-github" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Ensure our code is properly formatted before it is uploaded to Github</strong>
+</h4>
+
+<p>When we’re publishing code for a portfolio project, we want the code to be properly formatted. As an example, we don’t want our custom Python module to contain lines of code that are 350 characters long. There are many other best practices. See <a href="https://www.python.org/dev/peps/pep-0008/">PEP8</a> and the <a href="https://code.google.com/archive/p/soc/wikis/PythonStyleGuide.wiki">Google Style Guide for Python</a> for inspiration. This is especially important for collaborative projects. Code formatting is enforced using <code class="language-plaintext highlighter-rouge">.pre-commit-config.yaml</code>. This file will prevent code from being pushed to <code class="language-plaintext highlighter-rouge">git</code> if it does not meet requirements such as newline file-endings (<a href="https://thoughtbot.com/blog/no-newline-at-end-of-file">1</a>, <a href="https://www.quora.com/Why-is-it-good-practice-to-add-a-newline-to-the-end-of-a-file">2</a>).</p>
+
+<h4 id="co-ordinate-execution-of-our-workflows-using-a-makefile">
+<a class="anchor" href="#co-ordinate-execution-of-our-workflows-using-a-makefile" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Co-ordinate execution of our workflows using a <code class="language-plaintext highlighter-rouge">Makefile</code></strong>
+</h4>
+
+<p>Running notebooks programmatically, manually running our code formatting checks and starting the jupyter notebook server for local development are initiated by their respective CLI commands. We don’t want to remember this every time we need to update our project, push changes to github, etc. For example, if we make a change to the second notebook in our project then we should be able to quickly run all the notebooks in the project to ensure that the chage we just made has not caused errors elsewhere in the analysis. Papermill is a quick way to do this but we need to remember the command to use this tool. Over time, we will get better at remembering these commands. But what about visitors to our portfolio project on Github? Should we also expect that they too will know the exact commands that are needed to perform these tasks in our project? A better approach is to simplify this as much as possible by reducing the amount of command-line code to be called in order to perform a task. We will do this with <code class="language-plaintext highlighter-rouge">make</code> (<a href="https://www.gnu.org/software/make/manual/make.html">link</a>). On most Linux distributions, <code class="language-plaintext highlighter-rouge">make</code> comes pre-installed. Windows users can download <code class="language-plaintext highlighter-rouge">cmake</code> from <a href="https://cmake.org/download/">here</a> and <a href="https://www.youtube.com/watch?v=8_X5Iq9niDE">follow this video to install it</a>.</p>
+
+<p>To minimize user input, a <code class="language-plaintext highlighter-rouge">Makefile</code> (<a href="https://www.gnu.org/software/make/manual/make.html#Introduction">link</a>) is provided which runs the relevant command in each Python environment. The following <a href="https://www.gnu.org/software/make/manual/make.html#Phony-Targets"><code class="language-plaintext highlighter-rouge">make</code> targets</a> are provided</p>
+<div class="Toast">
+   <span class="Toast-icon"><svg class="octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg></span>
+   <span class="Toast-content"><b>build</b></span>
+</div>
+
+<p>…starts a Jupyter notebook server</p>
+<div class="Toast">
+   <span class="Toast-icon"><svg class="octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg></span>
+   <span class="Toast-content"><b>precommit</b></span>
+</div>
+
+<p>…manually runs all code-formatting checks defined in <code class="language-plaintext highlighter-rouge">.pre-commit-config.yaml</code></p>
+<div class="Toast">
+   <span class="Toast-icon"><svg class="octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg></span>
+   <span class="Toast-content"><b>ci</b></span>
+</div>
+
+<p>…programmatically runs all notebooks in the project</p>
+<div class="Toast">
+   <span class="Toast-icon"><svg class="octicon octicon-info" viewbox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M8 1.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM0 8a8 8 0 1116 0A8 8 0 010 8zm6.5-.25A.75.75 0 017.25 7h1a.75.75 0 01.75.75v2.75h.25a.75.75 0 010 1.5h-2a.75.75 0 010-1.5h.25v-2h-.25a.75.75 0 01-.75-.75zM8 6a1 1 0 100-2 1 1 0 000 2z"></path></svg></span>
+   <span class="Toast-content"><b>clean</b></span>
+</div>
+
+<p>…cleans up <a href="https://www.python.org/dev/peps/pep-3147/#python-behavior">Python artifacts</a></p>
+
+<h4 id="extract-and-outsource-code-into-python-modules">
+<a class="anchor" href="#extract-and-outsource-code-into-python-modules" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Extract and Outsource code into Python modules</strong>
+</h4>
+
+<p>We’ll now focus on the folders that are created, excluding the folder with code for our custom Python package. Different types of files will be saved in these folders. Below is a quick overview of each folder</p>
+
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">data/raw</code>
+    <ul>
+      <li>raw data that is retrieved in <code class="language-plaintext highlighter-rouge">01_get_data.ipynb</code> will be stored in the <code class="language-plaintext highlighter-rouge">raw/</code> sub-folder within <code class="language-plaintext highlighter-rouge">data/</code>
+</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">data/processed</code>
+    <ul>
+      <li>data that is processed using <code class="language-plaintext highlighter-rouge">02_process_data.ipynb</code> will be stored in the <code class="language-plaintext highlighter-rouge">processed/</code> sub-folder within <code class="language-plaintext highlighter-rouge">data/</code>
+</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">models</code>
+    <ul>
+      <li>any trained machine learning models should be serialized (<a href="https://scikit-learn.org/stable/modules/model_persistence.html"><code class="language-plaintext highlighter-rouge">scikit-learn</code></a>, <a href="https://www.tensorflow.org/guide/keras/save_and_serialize#how_to_save_and_load_a_model"><code class="language-plaintext highlighter-rouge">keras</code></a>, <a href="https://spacy.io/usage/saving-loading"><code class="language-plaintext highlighter-rouge">spaCy</code></a>) to this location on the disk</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">executed_notebooks</code>
+    <ul>
+      <li>when <code class="language-plaintext highlighter-rouge">papermill</code> executes a jupyter notebook, it saves a copy of the executed notebook in this folder</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">references</code>
+    <ul>
+      <li>here we can store whitepapers, research papers, etc. from our background research about the topic of our analysis</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">reports/figures</code>
+    <ul>
+      <li>if we choose to save figures we generated in the Jupyter notebooks to disk, then we should export them to the <code class="language-plaintext highlighter-rouge">figures/</code> sub-folder within <code class="language-plaintext highlighter-rouge">reports/</code>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Finally, we’ll discuss the contents of the Python package that is created. The default name for this package is specified in <code class="language-plaintext highlighter-rouge">config.yaml</code> to be <code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}</code>. For more discussion about package naming and structure see the following links</p>
+<ul>
+  <li><a href="https://docs.python-guide.org/writing/structure/">The Hitchhiker’s Guide to Python</a></li>
+  <li><a href="https://github.com/pypa/packaging.python.org/issues/320">Github issue in a repository of the Python Packaging Authority</a></li>
+  <li><a href="https://packaging.python.org/en/latest/tutorials/packaging-projects/">Documentation by Python Packaging Authority</a></li>
+  <li><a href="https://medium.com/analytics-vidhya/explicit-understanding-of-python-package-building-structuring-4ac7054c0749">Blog Post on the Medium publishing platform</a></li>
+  <li><a href="https://stackoverflow.com/questions/193161/what-is-the-best-project-structure-for-a-python-application">Question on Stackoverflow</a></li>
+</ul>
+
+<p>Inside this package are</p>
+<ul>
+  <li>four Python sub-packages (<a href="https://pythonhosted.org/PyBindGen/module.html#modules-and-sub-modules">1</a>, <a href="https://stackoverflow.com/a/70027834/4057186">2</a>, <a href="https://stackoverflow.com/a/63906462/4057186">3</a>)</li>
+  <li>one blank file <code class="language-plaintext highlighter-rouge">__init__.py</code> file</li>
+  <li>one Python module <code class="language-plaintext highlighter-rouge">utils.py</code>
+</li>
+</ul>
+
+<p><code class="language-plaintext highlighter-rouge">__init__.py</code> makes Python recognize the contents of the package (<code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}</code> folder) as Python modules. This means we can import modules in the sub-packages into a Python script or Jupyter notebook (with a Python kernel) using, as an example, the following approach to use the <code class="language-plaintext highlighter-rouge">visualization</code> sub-package</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">from</span> <span class="p">{{</span><span class="n">cookiecutter</span><span class="p">.</span><span class="n">package_name</span><span class="p">}}.</span><span class="n">visualization</span> <span class="kn">import</span> <span class="nn">visualize</span> <span class="k">as</span> <span class="n">vis</span>
+</code></pre></div></div>
+
+<p>This is similar to how we would have <a href="https://stackoverflow.com/a/54947660/4057186">imported a module from the <code class="language-plaintext highlighter-rouge">numpy</code> Python package</a></p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="nb">sum</span> <span class="k">as</span> <span class="n">np_sum</span>
+</code></pre></div></div>
+
+<p>One of the main benefits of extracting common code from our Jupyter notebook and placing it in such modules is to keep the Jupyter notebooks as focused as possible without distracting the reader. Read more about the benefits of refactoring code <a href="https://www.geeksforgeeks.org/7-reasons-why-code-refactoring-is-important-in-software-development/">here</a>. The <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code> template provides blank modules in each sub-package.</p>
+
+<p>In terms of re-factoring code into modules, the <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> template</p>
+<ul>
+  <li>adds two sample modules to the <code class="language-plaintext highlighter-rouge">data</code> sub-package to demonstrate basic examples of
+    <ul>
+      <li>retrieving (<code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}/data/load_data.py</code>) raw data</li>
+      <li>processing (<code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}/data/process_data.py</code>) raw data</li>
+    </ul>
+  </li>
+  <li>adds one sample module in <code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}/utils.py</code> with a few custom utilities for exploring data stored in <code class="language-plaintext highlighter-rouge">DataFrame</code>s (<a href="https://www.w3schools.com/python/pandas/pandas_dataframes.asp">link</a>)</li>
+  <li>shows examples of best-practices at developing custom modules using
+    <ul>
+      <li>
+<a href="https://www.python.org/dev/peps/pep-0257/">docstrings</a> for all methods in the sample modules</li>
+      <li>Python <a href="https://docs.python.org/3/library/typing.html">type-annotations</a> for all parameters in methods in the sample modules</li>
+    </ul>
+
+    <p>both of which improve the readability of the content in these modules</p>
+  </li>
+</ul>
+
+<p>Below is a brief overview of the four Python sub-packages and the Python module in <code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}</code></p>
+<ul>
+  <li>
+<code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}/data</code>
+    <ul>
+      <li>contains three modules to retrieve and process raw data</li>
+    </ul>
+  </li>
+  <li>(optional) <code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}/features</code>
+    <ul>
+      <li>contains a module to build features for the machine learning (ML) step of a project (if present)</li>
+    </ul>
+  </li>
+  <li>(optional) <code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}/models</code>
+    <ul>
+      <li>contains two modules to train a ML model and make predictions with the trained model, in the ML step of a project (if present)</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}/visualization</code>
+    <ul>
+      <li>contains a module to visualize processed data</li>
+    </ul>
+  </li>
+  <li>
+<code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}/utils.py</code>
+    <ul>
+      <li>a Python module containing convenience utilities for exploring a <code class="language-plaintext highlighter-rouge">DataFrame</code>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="licensing">
+<a class="anchor" href="#licensing" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Licensing</strong>
+</h4>
+
+<p>Can users use our analysis in their own portfolios? If our analysis is useful, this would be a great way to get some recognition for our hard work. An open-source license is provided to allow visitors to understand how they can use the code in our portfolio project and whether we need them to give us credit. To get started with using open source licenses for data science projects, see <a href="https://towardsdatascience.com/a-data-scientists-guide-to-open-source-licensing-c70d5fe42079">this blog post</a>.</p>
+
+<h4 id="customize-the-cookiecutter-portfolio-template">
+<a class="anchor" href="#customize-the-cookiecutter-portfolio-template" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Customize the <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> template</strong>
+</h4>
+
+<p>The <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> template was developed with the intention of being used as-is with no need for changes. A project will be created and the two sample notebooks will be programmatically executed allowing us to immediately start developing code in <code class="language-plaintext highlighter-rouge">01_get_data.ipynb</code>.</p>
+
+<p>If we would like to make changes to the <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> template, then the above walkthrough has provided us with a baseline understanding of the folder structure of the project that the template produces for us. This knowledge will help us to further personalize (modify) this template to suit our own custom workflows. Refer to the <a href="https://cookiecutter.readthedocs.io/en/latest/">documentation for the <code class="language-plaintext highlighter-rouge">cookiecutter</code> Python package</a> for help with the basics of templating using <code class="language-plaintext highlighter-rouge">cookiecutter</code>. In particular, the sections <a href="https://cookiecutter.readthedocs.io/en/latest/tutorial1.html"><strong>Getting to Know Cookiecutter</strong></a> and <a href="https://cookiecutter.readthedocs.io/en/latest/tutorial2.html"><strong>Create a Cookiecutter From Scratch</strong></a> are useful starting points.</p>
+
+<p>If we make any changes, then we can quickly check that the template is still rendered correctly, code formatting checks still pass and that the execution of the sample notebooks (in the template folder) runs through to completion by <a href="https://github.com/elsdes3/cookiecutter-portfolio#usage">simply running the following from the root folder</a> (like we saw in the <strong>Usage</strong> section above)</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>make build
+</code></pre></div></div>
+<p>That’s all. If the changes we made to the template were correctly implemented then everything should run through without any errors.</p>
+
+<h2 id="differences-between-cookiecutter-portfolio-and-cookiecutter-data-science">
+<a class="anchor" href="#differences-between-cookiecutter-portfolio-and-cookiecutter-data-science" aria-hidden="true"><span class="octicon octicon-link"></span></a>Differences between <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> and <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code>
+</h2>
+
+<p>This section of the blog post is only needed to compare <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> to the Python <code class="language-plaintext highlighter-rouge">cookiecutter</code> it is based on (<code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code>) and understand the differences. This section does not affect how to use the <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> template.</p>
+
+<p>As was mentioned earlier, <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> is based on the <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code> template. We will now discuss how <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> is different from <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code>. This discussion will help to clarify the need for creating this template instead of using <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code>.</p>
+
+<h3 id="changes-in-the-created-project-template-relative-to-cookiecutter-data-science">
+<a class="anchor" href="#changes-in-the-created-project-template-relative-to-cookiecutter-data-science" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changes in the created project template relative to <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code>
+</h3>
+
+<p>We will first discuss changes made to the template itself. This means any changes inside the <code class="language-plaintext highlighter-rouge">{{cookiecutter.repo_name}}</code> folder.</p>
+
+<p>We will start by listing the files and folders from the <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code> template that were deleted</p>
+<ol>
+  <li>The <code class="language-plaintext highlighter-rouge">notebooks</code> folder is deleted. The notebooks will be placed directly in the root of the project.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">docs</code> is deleted. This feature was aimed at adding documentation for the <code class="language-plaintext highlighter-rouge">{{ cookiecutter.module }}</code> Python module. In our case, for simplicity, we will not offer this feature with the template but it can be easily brought back later if required.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">.env</code> is removed from the root of the project. This file is used to store credentials that will be injected as environment variables using the <code class="language-plaintext highlighter-rouge">python-dotenv</code> library, which will iteratively walk up through the file system, starting from this project’s root directory, until it finds this file. So, the file can be located one level above this project’s root. The benefit of this is that we can re-use the same credentials for multiple projects.</li>
+</ol>
+
+<p>We’ll now discuss files that have been changed</p>
+<ol>
+  <li>
+<code class="language-plaintext highlighter-rouge">.gitignore</code> is <a href="https://github.com/drivendata/cookiecutter-data-science/issues/32#issuecomment-481078249">modified</a> such that <code class="language-plaintext highlighter-rouge">data/</code> and its sub-folders (<strong>excluding contents</strong>) are not ignored by <code class="language-plaintext highlighter-rouge">git</code>. This means, <code class="language-plaintext highlighter-rouge">data/</code> and its (empty) sub-folders will be kept on github and won’t have to be manually created after we pull code from the repository.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">tox.ini</code> is modified to manage all Python virtual environments required for this project. See a basic <code class="language-plaintext highlighter-rouge">tox.ini</code> configuration file <a href="https://tox.wiki/en/3.24.5/example/basic.html#a-simple-tox-ini-default-environments">here</a>. See the <a href="https://tox.wiki/en/latest/"><code class="language-plaintext highlighter-rouge">tox</code> documentation</a> for more details.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">{{ cookiecutter.module_name }}</code>
+    <ul>
+      <li>renamed to <code class="language-plaintext highlighter-rouge">{{ cookiecutter.package_name }}</code> to be in line with standard Python conventions about the differences between packages and modules (<a href="https://www.learnpython.org/en/Modules_and_Packages">1</a>, <a href="https://stackoverflow.com/a/70027834/4057186">2</a>)</li>
+      <li>renamed to <code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}</code> since <code class="language-plaintext highlighter-rouge">.pre-commit-config.yaml</code> could not correctly detect the leading and trailing space in the name of this folder</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">data</code>
+        <ul>
+          <li>two sample Python sub-modules <code class="language-plaintext highlighter-rouge">load_data.py</code> and <code class="language-plaintext highlighter-rouge">process_data.py</code> <sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> are added</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-plaintext highlighter-rouge">utils.py</code>
+        <ul>
+          <li>a few simple Python methods are included in this module to support brief exploration of <code class="language-plaintext highlighter-rouge">DataFrame</code>s</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>More details have been added to the provided <code class="language-plaintext highlighter-rouge">README.md</code> file.</li>
+  <li>A set of commonly-used Python libraries have been added to <code class="language-plaintext highlighter-rouge">requirements.txt</code> <sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+</ol>
+
+<p>The following files have been added</p>
+<ol>
+  <li>
+<code class="language-plaintext highlighter-rouge">environment.yml</code> is provided to support launching or sharing the project on the <a href="https://mybinder.readthedocs.io/en/latest/introduction.html#a-binder-example">MyBinder</a> service.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">papermill_runner.py</code> is added to support executing notebooks. This is done using the <a href="https://papermill.readthedocs.io/en/latest/usage-execute.html#execute-via-the-python-api"><code class="language-plaintext highlighter-rouge">papermill</code> Python API</a>. See the <a href="https://papermill.readthedocs.io/en/latest/">papermill documentation</a> for more details.</li>
+  <li>
+<code class="language-plaintext highlighter-rouge">.pre-commit-config.yaml</code> is added to ensure files and code follow proper formatting (eg. code linting) before every commit to <code class="language-plaintext highlighter-rouge">git</code>. See the <a href="https://pre-commit.com/#quick-start"><code class="language-plaintext highlighter-rouge">pre-commit</code> Quick start</a> to get started using this framework.</li>
+  <li>The <code class="language-plaintext highlighter-rouge">executed_notebooks</code> folder is added as the location where notebooks executed with <code class="language-plaintext highlighter-rouge">papermill</code> will be saved.</li>
+  <li>Two sample notebooks to replicate downloading (<code class="language-plaintext highlighter-rouge">01_get_data.ipynb</code>) and processing (<code class="language-plaintext highlighter-rouge">02_process_data.ipynb</code>) raw data <sup id="fnref:1:2" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</li>
+</ol>
+
+<p>The following files and folders are not been changed (except for sorting imports in files)</p>
+<ol>
+  <li><code class="language-plaintext highlighter-rouge">setup.py</code></li>
+  <li>
+<code class="language-plaintext highlighter-rouge">data</code> and its sub-folders</li>
+  <li><code class="language-plaintext highlighter-rouge">models</code></li>
+  <li><code class="language-plaintext highlighter-rouge">references</code></li>
+  <li><code class="language-plaintext highlighter-rouge">reports</code></li>
+  <li>
+<code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}</code>
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">data/make_dataset.py</code></li>
+      <li><code class="language-plaintext highlighter-rouge">features</code></li>
+      <li><code class="language-plaintext highlighter-rouge">models</code></li>
+      <li><code class="language-plaintext highlighter-rouge">visualization</code></li>
+    </ul>
+  </li>
+</ol>
+
+<p>Besides differences in the directory structure and file contents, <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> provides and runs two sample notebooks that are provided. By comparison, <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code> doesn’t offer or run notebooks after rendering the template. Offering a sample notebook makes it a little easier for a user to start developing code using the created Python modules in <code class="language-plaintext highlighter-rouge">{{cookiecutter.package_name}}</code> and the templates directories (eg. <code class="language-plaintext highlighter-rouge">data/raw</code>, <code class="language-plaintext highlighter-rouge">data/processed</code>, <code class="language-plaintext highlighter-rouge">executed_notebooks</code>) after generating the template. The user can quickly adapt this code for use in future steps in the workflow (i.e. in other notebooks).</p>
+
+<h3 id="changes-at-the-project-level-relative-to-cookiecutter-data-science">
+<a class="anchor" href="#changes-at-the-project-level-relative-to-cookiecutter-data-science" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changes at the project level relative to <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code>
+</h3>
+
+<p>Next, at the repository level, the implementation of <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> is fundamentally different to that in the <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code> template. Specifically, the implementation of this project (<code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code>) is purely that of a template that only follows the structure of a <a href="https://cookiecutter.readthedocs.io/en/latest/tutorial2.html">Python <code class="language-plaintext highlighter-rouge">cookiecutter</code></a>. By comparison, the <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code> template can be installed in editable mode - this is not supported by <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">tox</code> is used for managing python virtual environments at the repository level so it is added to <code class="language-plaintext highlighter-rouge">requirements.txt</code>. The other requirements file, <code class="language-plaintext highlighter-rouge">requirements-test.txt</code>, is only used to specify Python packages to use in the unit testing virtual environment. Tests are implemented exclusively using <a href="https://pytest-cookies.readthedocs.io/en/latest/"><code class="language-plaintext highlighter-rouge">pytest-cookies</code></a>, a framework designed specifically to test generation of templates created using <code class="language-plaintext highlighter-rouge">cookiecutter</code>.</p>
+
+<p>As such, two significant changes have been made</p>
+<ol>
+  <li>
+<code class="language-plaintext highlighter-rouge">tests</code>, <code class="language-plaintext highlighter-rouge">{{cookiecutter.repo_name}}</code> and <code class="language-plaintext highlighter-rouge">hooks</code> are placed inside a <code class="language-plaintext highlighter-rouge">cookiecutter-project</code> sub-folder. This is done so that the user can generate this (<code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code>) template without any command-line prompts. To do this, the documentation from the <code class="language-plaintext highlighter-rouge">cookiecutter</code> project was used to
+    <ul>
+      <li>providing the command line arguments required to <a href="https://cookiecutter.readthedocs.io/en/latest/advanced/suppressing_prompts.html">suppress command-line prompts</a>
+        <ul>
+          <li><code class="language-plaintext highlighter-rouge">--no-input</code></li>
+          <li><code class="language-plaintext highlighter-rouge">--config-file</code></li>
+        </ul>
+      </li>
+      <li>
+<a href="https://cookiecutter.readthedocs.io/en/latest/advanced/user_config.html">specify a user configuration file (<code class="language-plaintext highlighter-rouge">config.yaml</code>)</a>
+        <ul>
+          <li>by providing this file, the user can directly modify it following the instructions in the <a href="https://github.com/elsdes3/cookiecutter-portfolio/blob/main/README.md">README.md file</a> (see <a href="https://github.com/elsdes3/cookiecutter-portfolio/blob/main/README.md#usage"><strong>Usage</strong></a> and <a href="https://github.com/elsdes3/cookiecutter-portfolio/blob/main/README.md#notes"><strong>Notes</strong></a>) rather than needing to manually create these files and populate their contents appropriately.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Several files in the template are not required in <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code>
+    <ul>
+      <li>
+<code class="language-plaintext highlighter-rouge">ccds</code>  <sup id="fnref:1:3" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>
+</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">ccds.json</code> <sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>
+</li>
+      <li>
+<code class="language-plaintext highlighter-rouge">dev-requirements.txt</code>
+        <ul>
+          <li>a standard development environment is not supported here</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-plaintext highlighter-rouge">netlify.toml</code>
+        <ul>
+          <li>
+<a href="https://www.netlify.com/">Netlify</a> is not supported here</li>
+        </ul>
+      </li>
+      <li>
+<code class="language-plaintext highlighter-rouge">setup.py</code>
+        <ul>
+          <li>this template does not support <a href="https://pip.pypa.io/en/stable/cli/pip_install/#local-project-installs">installation in editable mode</a> so use of this file is not supported here</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<h2 id="summary">
+<a class="anchor" href="#summary" aria-hidden="true"><span class="octicon octicon-link"></span></a>Summary</h2>
+
+<p>With the <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> template, we have access to an project built on the strong foundations of <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code> with</p>
+<ul>
+  <li>programmatic execution of data analysis</li>
+  <li>pre-populated code-formatting framework</li>
+  <li>virtual environments to manage all Python code</li>
+  <li>an implementation of continuous integration to ensure any modifications to our code-base result in
+    <ul>
+      <li>analysis that still executes from start to finish</li>
+      <li>code whose <a href="https://www.python.org/dev/peps/pep-0008/">formatting follows best practices</a>
+</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Combined, these add a layer of automation to the strong base offered to us by <code class="language-plaintext highlighter-rouge">cookiecutter-data-science</code>.</p>
+
+<h2 id="contributing-to-cookiecutter-portfolio">
+<a class="anchor" href="#contributing-to-cookiecutter-portfolio" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing to <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code>
+</h2>
+
+<p>Contributions to <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> are very welcome, and are greatly appreciated. Every little bit helps, and credit will always be given.</p>
+
+<p>If you do decide to use the <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> template and have recommendations to improve the structure of this template or corrections to mistakes, <a href="https://github.com/elsdes3/cookiecutter-portfolio/issues/new">create an issue on Github</a>.</p>
+
+<p>Tests can be run with</p>
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">make</span> <span class="n">test</span> <span class="n">clean</span><span class="o">-</span><span class="n">tests</span>
+</code></pre></div></div>
+<p>Please make sure that all tests are green before submitting a <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests">pull request on Github</a>.</p>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>These are only provided as a starting point for loading and processing data respectively. These are not repersentative of any real-world workflow. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">↩</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">↩<sup>2</sup></a> <a href="#fnref:1:2" class="reversefootnote" role="doc-backlink">↩<sup>3</sup></a> <a href="#fnref:1:3" class="reversefootnote" role="doc-backlink">↩<sup>4</sup></a></p>
+    </li>
+    <li id="fn:2" role="doc-endnote">
+      <p>It is not indended that <code class="language-plaintext highlighter-rouge">cookiecutter-portfolio</code> should be called using the command <code class="language-plaintext highlighter-rouge">ccds</code>. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">↩</a></p>
+    </li>
+  </ol>
+</div>
+
+  </div><a class="u-url" href="/analytics-ops-implementation-overload/markdown/cookiecutter/data-science/portfolio/template/python/2022/01/24/project-template-post.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/analytics-ops-implementation-overload/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/analytics-ops-implementation-overload/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/analytics-ops-implementation-overload/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>A blog about Data and Analytics.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/elsdes3" target="_blank" title="elsdes3"><svg class="svg-icon grey"><use xlink:href="/analytics-ops-implementation-overload/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/elsdes3" target="_blank" title="elsdes3"><svg class="svg-icon grey"><use xlink:href="/analytics-ops-implementation-overload/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
