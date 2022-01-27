@@ -2,6 +2,8 @@
 toc: true
 layout: post
 description: A minimal project structure for a data science portfolio.
+comments: true
+sticky_rank: 1
 categories: [markdown, cookiecutter, data-science, portfolio, template, python]
 title: Automate Creation and Use of a Structured Data Science Portfolio Project
 ---
