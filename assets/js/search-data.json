@@ -62,7 +62,7 @@
   
       ,"page1": {
           "title": "About Me",
-          "content": "Hi there! . Welcome to my personal blog. . TBD… .",
+          "content": "I’m a data consultant and Python developer. I use data and technology to help solve important problems. I’m passionate about the operational aspects of data analytics and write about these and related topics in my blogs here. .",
           "url": "https://elsdes3.github.io/analytics-ops-implementation-overload/about/",
           "relUrl": "/about/",
           "date": ""
